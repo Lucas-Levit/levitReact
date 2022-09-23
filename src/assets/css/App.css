@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar{
+  background-color: rgba(110, 34, 34, 0.705);
+}
+
+.logo{
+  width: 3rem;
+  margin-right: 0.7rem;
+}
+p{
+  font-size: 2rem;
+  font-family: sans-serif;
+}
