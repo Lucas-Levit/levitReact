@@ -15,3 +15,16 @@ p{
   font-size: 2rem;
   font-family: sans-serif;
 }
+
+.catalogo{
+  display: flex;
+  flex-direction: column;
+}
+
+.catalogo p {
+  font-size: 1rem;
+}
+
+.catalogo img{
+  width: 10rem;
+}
