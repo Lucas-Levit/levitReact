@@ -2,17 +2,27 @@ import React from 'react';
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from 'react';
 import { ItemDetail } from './ItemDetail';
+import { collection, doc, getDoc, getFirestore } from 'firebase/firestore';
 
 
 export const ItemDetailContainer = () => {
   const { id } = useParams()
   const [producto, setProducto] = useState({})
   const obtenerInfo = async () => {
-    const respuesta = await fetch(`https://fakestoreapi.com/products/${id}`)
-    const productos = await respuesta.json()
-    setProducto(productos);
-    console.log(productos);
-  }
+    const db = getFirestore()
+    const querycollection = collection(db, "items")
+    const referenciaDoc = doc(querycollection, id)
+    getDoc(referenciaDoc)
+    .then((result)=>{
+      setProducto({
+        id:result.id,
+        ...result.data()
+      })
+    })
+
+}
+
+console.log(producto)
   useEffect(() => {
     obtenerInfo()
   }, [])
@@ -22,4 +32,5 @@ export const ItemDetailContainer = () => {
 }
 
 export default ItemDetailContainer
+
 
