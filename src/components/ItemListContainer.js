@@ -1,18 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import Item from "./Item"
 import { collection, getDocs, getFirestore } from "firebase/firestore";
+import { useCartContext } from '../context/cartcontext';
 
 
 export const ItemListContainer = ({ greeting }) => {
+    const {carrito} = useCartContext()
     const [producto, setProducto] = useState([])
-
-    // const obtenerInfo = async () => {
-    //     const respuesta = await fetch("https://fakestoreapi.com/products")
-    //     const productos = await respuesta.json()
-    //     setProducto(productos);
-    //     console.log(productos);
-    // }
-
+    console.log({carrito})
     const obtenerInfo = async () => {
     const db = getFirestore ()
     const querycollection = collection (db, "items")

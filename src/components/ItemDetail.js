@@ -1,4 +1,6 @@
 import React from 'react'
+import { ItemCount } from './ItemCount'
+
 
 export const ItemDetail = ({ producto }) => {
     return (
@@ -7,7 +9,7 @@ export const ItemDetail = ({ producto }) => {
             <img src={producto.image} alt="articulo" className='imgSelect' />
             <p className='precio'>{producto.price}</p>
             <p className='descripcion'>{producto.descripcion}</p>
+            <ItemCount producto = {producto} />
         </div>
     )
 }
-export default ItemDetail

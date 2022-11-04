@@ -7,7 +7,8 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./assets/css/App.css"
 import { Waveform } from '@uiball/loaders'
 import { firestoreInit } from "./firebase/config";
-import { ItemCount } from "./components/ItemCount";  
+import CartProvider from "./context/cartcontext.js";
+import Carrito from "./components/Carrito"
 
 
 
@@ -17,12 +18,15 @@ firestoreInit()
 function App() {
   return (
     <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<ItemListContainer greeting={"hola que tal"} />} />
-        <Route path="/category/:id" element={<ItemListContainer />} />
-        <Route path="/item/:id" element={<ItemDetailContainer />} />
-      </Routes>
+      <CartProvider> 
+          <NavBar />
+          <Routes>
+          <Route path="/carrito" element= {<Carrito/>} />
+          <Route path="/" element={<ItemListContainer greeting={"hola que tal"} />} />
+          <Route path="/category/:id" element={<ItemListContainer />} />
+          <Route path="/item/:id" element={<ItemDetailContainer />} />
+          </Routes>
+      </CartProvider>
     </BrowserRouter>
   );
 }
