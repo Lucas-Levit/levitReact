@@ -1,9 +1,7 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import React, { createContext, useContext,  useState } from 'react'
 
 const CartContext = createContext("")
 export const useCartContext = () => useContext(CartContext)
-
-
 
 
 const CartProvider = ({ children }) => {
