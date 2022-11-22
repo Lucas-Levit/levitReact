@@ -5,7 +5,6 @@ import { useCartContext } from "../context/cartcontext";
 export const ItemCount = ({ producto, onAdd }) => {
     <button onClick={() => onAdd(counter)} >Comprar</button>
     const { agregarAlCarrito, carrito } = useCartContext()
-    useEffect(() => [carrito])
     const [counter, setCounter] = useState(1)
     const add = () => { setCounter(counter + 1) }
     const subtract = () => { setCounter(counter - 1) }
@@ -16,6 +15,6 @@ export const ItemCount = ({ producto, onAdd }) => {
             <button onClick={subtract} className="btn btn-outline-primary">-</button>
             <button onClick={() => agregarAlCarrito(producto, counter)} className="btn btn-outline-primary">Agregar al carrito</button>
         </div>
-    
+
     )
 }

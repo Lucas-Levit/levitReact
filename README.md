@@ -1,3 +1,6 @@
+Esta app es sobre un bazar de cocina, donde vas a encontrar los mejores productos para equipar tu cocina y tener todas las herramientas necesarias para poder preparar los mas exquisitos platos y comidas preferidas.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
