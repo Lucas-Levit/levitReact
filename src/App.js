@@ -9,6 +9,7 @@ import { Waveform } from '@uiball/loaders'
 import { firestoreInit } from "./firebase/config";
 import CartProvider from "./context/cartcontext.js";
 import Carrito from "./components/Carrito"
+import FinalizarCompra from "./components/FinalizarCompra";
 
 
 
@@ -21,6 +22,7 @@ function App() {
       <CartProvider> 
           <NavBar />
           <Routes>
+          <Route path="/FinalizarCompra" element={<FinalizarCompra/>}/>
           <Route path="/carrito" element= {<Carrito/>} />
           <Route path="/" element={<ItemListContainer greeting={"hola que tal"} />} />
           <Route path="/category/:id" element={<ItemListContainer />} />
