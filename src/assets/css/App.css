@@ -7,6 +7,13 @@
   background-color: rgba(110, 34, 34, 0.705);
 }
 
+.navbar .categorias {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+} 
+
+
 .logo{
   width: 3rem;
   margin-right: 0.7rem;
@@ -104,4 +111,46 @@ p{
     width: 24px;
     height: 24px;
     text-align: center;
+}
+
+.total{
+  font-size: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.formulario{
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+.input{
+  margin-top: 0.5rem;
+}
+
+.contador{
+  display: flex;
+  flex-direction: row;
+  margin-right: 5rem;
+}
+
+.btn{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  
+}
+.number{
+  font-size: 1.5rem;
+}
+
+.total{
+  margin-top: 2rem;
+}
+
+.contenedorCarrito{
+  display: flex;
+  text-decoration: none;
 }

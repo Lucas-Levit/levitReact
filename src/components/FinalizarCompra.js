@@ -2,10 +2,10 @@ import React from 'react'
 import { useCartContext } from "../context/cartcontext";
 
 export const FinalizarCompra = () => {
-    const { carrito } = useCartContext()
+    const { carrito, totalFinal } = useCartContext()
 
     return (
-        <div>
+        <div className={'finalizarCompra'}>
             El total de tu compra es de ${carrito.reduce((acc, producto) => acc + producto.total, 0)}
 
         </div>

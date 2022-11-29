@@ -25,7 +25,8 @@ function App() {
           <Route path="/FinalizarCompra" element={<FinalizarCompra/>}/>
           <Route path="/carrito" element= {<Carrito/>} />
           <Route path="/" element={<ItemListContainer greeting={"hola que tal"} />} />
-          <Route path="/category/:id" element={<ItemListContainer />} />
+          <Route path='/category' element={ <ItemListContainer />}/>
+          <Route path="/category/:idCategoria" element={<ItemListContainer />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
           </Routes>
       </CartProvider>

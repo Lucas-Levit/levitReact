@@ -3,19 +3,22 @@ import cart from "../assets/img/cart.svg"
 import { useCartContext } from "../context/cartcontext";
 
 export const CartWidget = () => {
-    const { carrito } = useCartContext()
-    let arr = []
-    const sumarCantidad = () => {
-        carrito.forEach(producto => arr.push(producto.cantidad))
-        return arr.reduce((a, b) => a + b, 0)
+    const { carrito, totalCantidad } = useCartContext()
 
-    }
     return (
-        <div>
-            <img className="logo" src={cart} alt="carrito"></img>
-            <p className='contadorCarro'>{sumarCantidad()}</p>
-
-        </div>
+        <>
+            {carrito.length ? 
+            <div>
+                <img className="logo" src={cart} alt="carrito"></img>
+                <div className='contadorCarro'> { totalCantidad() } </div>
+            </div>
+        :
+            <div>
+                <img className="logo" src={cart} alt="carrito"></img>
+            </div>
+        }
+        </>
+       
     )
 
 

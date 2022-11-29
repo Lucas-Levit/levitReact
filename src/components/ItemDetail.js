@@ -1,12 +1,17 @@
 import React from 'react'
+import { useCartContext } from '../context/cartcontext'
 import { ItemCount } from './ItemCount'
 
 
 
 export const ItemDetail = ({ producto }) => {
+    const {agregarAlCarrito} = useCartContext()
+
+
     const handleOnAdd = (cantidad) => {
-        // const agregarAlCarrito  (producto, cantidad)
+        agregarAlCarrito({...producto, cantidad})
     }
+     
     return (
         <div className='borde row'>
             <h2 className='titulo'>{producto.name}</h2>
