@@ -7,18 +7,18 @@ export const CartWidget = () => {
 
     return (
         <>
-            {carrito.length ? 
-            <div>
-                <img className="logo" src={cart} alt="carrito"></img>
-                <div className='contadorCarro'> { totalCantidad() } </div>
-            </div>
-        :
-            <div>
-                <img className="logo" src={cart} alt="carrito"></img>
-            </div>
-        }
+            {carrito.length ?
+                <div>
+                    <img className="logo" src={cart} alt="carrito"></img>
+                    <div className='contadorCarro'> {totalCantidad()} </div>
+                </div>
+                :
+                <div>
+                    <img className="logo" src={cart} alt="carrito"></img>
+                </div>
+            }
         </>
-       
+
     )
 
 
